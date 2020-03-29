@@ -97,6 +97,11 @@ PRODUCT_PACKAGES += \
     nfc_nci.nqx.default.hw
 endif
 
+# Power
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
+endif
+
 # QCOM HW crypto
 ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
     TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/commonsys/cryptfs_hw
