@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=2.2 \
     ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.perf.scroll_opt=true \
     ro.vendor.qspm.enable=true \
     vendor.power.pasr.enabled=false \
     vendor.pasr.activemode.enabled=false
