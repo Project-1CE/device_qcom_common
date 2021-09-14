@@ -47,7 +47,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1
 
 # Packages
@@ -108,6 +107,11 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.ims.disableDebugLogs=1 \
     persist.vendor.ims.disableIMSLogs=1 \
     persist.vendor.ims.disableQXDMLogs=1
+endif
+
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.rat_on=combine
 endif
 
 # Force VoLTE/VoWiFi/ViLTE
