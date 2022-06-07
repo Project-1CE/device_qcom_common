@@ -52,32 +52,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
     android.hardware.radio@1.6 \
     android.hardware.radio.config@1.3 \
     android.hardware.radio.deprecated@1.0 \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
-    ims-ext-common \
-    ims_ext_common.xml \
-    libjson \
-    Stk \
-    tcmiface \
-    telephony-ext \
-    qti-telephony-hidl-wrapper \
-    qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper.xml \
-    qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
-    qti-telephony-utils-prd \
-    qti_telephony_utils.xml \
-    qti_telephony_utils_prd.xml
-
-PRODUCT_BOOT_JARS += \
-    tcmiface \
-    telephony-ext
+    libjson
 
 # Permissions
 PRODUCT_COPY_FILES += \
