@@ -15,10 +15,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/telephony
 
-# APN List
-PRODUCT_COPY_FILES += \
-    device/qcom/common/telephony/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
-
 # Carrier config
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon
@@ -110,7 +106,3 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1
-
-# Sensitive Phone Numbers list
-PRODUCT_COPY_FILES += \
-    device/qcom/common/telephony/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
