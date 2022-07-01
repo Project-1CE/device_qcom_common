@@ -35545,6 +35545,33 @@ Oneplus modification history ex. [Patch#ID][Date][Jira#ID][MCC/MNC][Owner email]
 <!-- VENDOR_EDIT end Patch#0515 [2018-02-01] -->
 <!-- VENDOR_EDIT end Patch#0515 [2019-12-19] -->
 
+  <!-- DuYuanhua@NETWORK.DATA.2588267, 2022/03/29, add for CBN MNO begin  -->
+  <apn carrier="CBNET"
+      mcc="460"
+      mnc="15"
+      apn="cbnet"
+      type="default,supl"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="IA"
+      mcc="460"
+      mnc="15"
+      apn=""
+      type="ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="IMS"
+      mcc="460"
+      mnc="15"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <!-- DuYuanhua@NETWORK.DATA.2588267, 2022/03/29, add for CBN MNO end  -->
+
   <!-- VENDOR_EDIT start Patch#0536 [2018-04-24] -->
   <apn carrier="FarEasTone (MMS)"
       mcc="466"
