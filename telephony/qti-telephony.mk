@@ -120,6 +120,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fetchqos=true
 endif
 
+ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+# Enable IMS RCS single registration
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.rcs.singlereg.feature=1
+endif
+
 # Force VoLTE/VoWiFi/ViLTE
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
