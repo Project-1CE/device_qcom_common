@@ -114,6 +114,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.rat_on=combine
 endif
 
+ifeq ($(call is-board-platform-in-list, bengal holi),true)
+# Allow fetching of QoS parameters via IQtiRadio HAL
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.fetchqos=true
+endif
+
 # Force VoLTE/VoWiFi/ViLTE
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
