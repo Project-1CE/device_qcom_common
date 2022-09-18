@@ -1,4 +1,5 @@
 ifneq ($(KERNEL_MODULES_INSTALL),)
+ifneq ($(TARGET_BOARD_PLATFORM),taro)
 
 # Get the number of CPU cores. This is the number of parallel jobs to be passed to make command.
 NCORES := $(shell grep -c ^processor /proc/cpuinfo)
@@ -223,4 +224,5 @@ KBUILD_OPTIONS :=
 LOCAL_ADDITIONAL_DEPENDENCIES :=
 KBUILD_OPTIONS_GKI :=
 
+endif
 endif
