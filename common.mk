@@ -68,6 +68,10 @@ ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(LOCAL_PATH)/display/qti-display.mk
 endif
 
+ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+include $(LOCAL_PATH)/dlkm/qti-dlkm.mk
+endif
+
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(LOCAL_PATH)/gps/qti-gps.mk
 endif
