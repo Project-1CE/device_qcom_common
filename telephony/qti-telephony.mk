@@ -30,7 +30,13 @@ $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_
 SYSTEM_EXT_MANIFEST_FILES += device/qcom/common/telephony/framework_manifest.xml
 
 # IPACM
+ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
+else
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
+$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)
+endif
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
