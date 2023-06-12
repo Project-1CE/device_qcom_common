@@ -7,18 +7,25 @@ QCOM_BOARD_PLATFORMS += \
     $(TRINKET) \
     atoll \
     bengal \
+    bengal_515 \
+    crow \
     holi \
     kona \
+    kona_515 \
+    kalama \
     lahaina \
     lito \
+    monaco \
     msm8937 \
     msm8953 \
     msm8996 \
     msm8998 \
     msmnile \
+    parrot \
     sdm660 \
     sdm710 \
-    sdm845
+    sdm845 \
+    taro
 
 # List of targets that use video hardware.
 MSM_VIDC_TARGET_LIST := \
