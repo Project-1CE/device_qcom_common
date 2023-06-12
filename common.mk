@@ -73,7 +73,9 @@ include $(LOCAL_PATH)/gps/qti-gps.mk
 endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
+ifeq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 include $(LOCAL_PATH)/perf/qti-perf.mk
+endif
 endif
 
 ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
