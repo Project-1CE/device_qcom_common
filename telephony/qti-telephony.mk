@@ -47,8 +47,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
-    android.hardware.radio@1.5 \
-    android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.6 \
+    android.hardware.radio.config@1.3 \
     android.hardware.radio.deprecated@1.0 \
     extphonelib \
     extphonelib-product \
@@ -61,9 +61,13 @@ PRODUCT_PACKAGES += \
     tcmiface \
     telephony-ext \
     qti-telephony-hidl-wrapper \
+    qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper.xml \
+    qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
-    qti_telephony_utils.xml
+    qti-telephony-utils-prd \
+    qti_telephony_utils.xml \
+    qti_telephony_utils_prd.xml
 
 PRODUCT_BOOT_JARS += \
     tcmiface \
@@ -73,7 +77,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
