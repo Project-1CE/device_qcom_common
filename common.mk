@@ -19,6 +19,8 @@ endif
 
 include $(LOCAL_PATH)/qcom_boards.mk
 
+ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
+
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_HAS_QC_KERNEL_SOURCE := true
 BOARD_USES_ADRENO := true
@@ -123,3 +125,5 @@ endif
 SOONG_CONFIG_NAMESPACES += bredr_vs_btadva
 SOONG_CONFIG_bredr_vs_btadva += bredr_or_btadva
 SOONG_CONFIG_bredr_vs_btadva_bredr_or_btadva := bredr
+
+endif # QCOM_BOARD_PLATFORMS
