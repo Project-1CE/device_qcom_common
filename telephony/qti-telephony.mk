@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon
 
 # Data Services
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/dataservices
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # HIDL
