@@ -34,3 +34,8 @@ PRODUCT_PACKAGES += \
     libqservice \
     libtinyxml \
     lights.qcom
+
+# Disable custom content metadata region on <5.15 targets
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+TARGET_GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE := true
+endif
