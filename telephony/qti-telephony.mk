@@ -51,7 +51,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6 \
     android.hardware.radio.config@1.3 \
     android.hardware.radio.deprecated@1.0 \
-    libjson
+    libjson \
+    vendor.qti.hardware.systemhelperaidl-V1-ndk
 
 # Permissions
 PRODUCT_COPY_FILES += \
