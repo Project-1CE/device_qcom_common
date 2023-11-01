@@ -60,8 +60,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=2.2 \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.power.pasr.enabled=true \
-    ro.vendor.qspm.enable=true
+    ro.vendor.qspm.enable=true \
+    vendor.power.pasr.enabled=false \
+    vendor.pasr.activemode.enabled=false
 
 ifeq ($(call is-board-platform-in-list, kona lahaina),true)
 PRODUCT_VENDOR_PROPERTIES += \
@@ -69,14 +70,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.c=0x4800 \
     ro.vendor.beluga.s=0x900 \
     ro.vendor.beluga.t=0x240
-endif
-
-ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
-ifeq ($(TARGET_BOARD_PLATFORM), holi)
-PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=false
-else
-PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=true
-endif
 endif
 
 # Get non-open-source specific aspects
